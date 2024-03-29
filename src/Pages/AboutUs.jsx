@@ -3,9 +3,12 @@ import c1 from '../assets/images/c1.png'
 import c2 from '../assets/images/c2.png'
 import c3 from '../assets/images/c3.png'
 import c4 from '../assets/images/c4.png'
+import CarouselSlide from '../Components/CarouselSlide'
+import { celebrities } from '../Constransts/CelebrityData'
 import HomeLayout from "../Layouts/HomeLayout"
 
 const AboutUs = () => {
+
   return (
     <HomeLayout>
         <div className=" pt-20 flex flex-col text-white">
@@ -43,8 +46,16 @@ const AboutUs = () => {
                 <div className="carousel-item ">
                     <img src={c4} />
                 </div> 
-  
             </div>
+
+            <div className="carousel w-1/2 m-auto my-16">
+                {celebrities && celebrities.map(celebrity => (<CarouselSlide 
+                                                             {...celebrity} 
+                                                             key={celebrity.slideNumber} 
+                                                             totalSlides={celebrities.length} 
+                                                             />))}
+            </div>
+
         </div>
     </HomeLayout>
   )
