@@ -1,13 +1,13 @@
 import {AiFillCloseCircle} from 'react-icons/ai'
 import { FiMenu } from 'react-icons/fi'
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import Footer from '../Components/Footer';
 
 const HomeLayout = ({ children }) => {
 
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
     const navigate = useNavigate();
 
     // for checking if user is logged in
